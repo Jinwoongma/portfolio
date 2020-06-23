@@ -33,175 +33,184 @@
 	<!-- Home -->
 	<section id="home">
 		<img src="imgs/profile.jpeg" alt="Jinwoong's profile photo" class="home__avatar">
-		<h1 class="home__title">Hello, <br /> My name is Jinwoong Kim</h1>
+		<h1 class="home__title">Hello, <br /> I'm Jinwoong Kim</h1>
 		<h2 class="home__description">남다른 목표의식을 가지고 <br /> 빠르게 성과를 낼 수 있는 준비된 지원자입니다.</h2>
 		<button class="home__contact">Contact Me</button>
 	</section>
 
 	<!-- About -->
-	<section id="about">
+	<section id="about" class="section section__container">
 		<h1>About me</h1>
 		<p>의공학을 전공하며 학부 과정에서는 웨어러블 디바이스를 활용한 헬스케어 서비스에 관심이 있었습니다. 
 			헬스케어 스타트업에서 인턴으로 근무하며 웹/앱 서비스 개발에 대한 매력을 느껴 현재 삼성 청년 소프트웨어 아카데미 3기에서 웹 프론트엔드/백엔드 교육과정을 수료중입니다.
 			새로운 기술을 배우는 것을 좋아하고 빠르게 학습할 수 있습니다.
 		</p>
 		<div class="about__majors">
-			<div class="major"></div>
-			<div class="major__icon">
-				<i class="fab fa-html5"></i>
+			<div class="major">
+				<div class="major__icon">
+					<i class="fab fa-html5"></i>
+				</div>
+				<h2 class="major__title">Front-end</h2>
+				<div class="major__description">
+					HTML, CSS, JavaScript, 
+					<br /> Vue, Web APIs
+				</div>
 			</div>
-			<div class="major__title">Front-end</div>
-			<div class="major__description">
-				HTML, CSS, JavaScript, 
-				<br /> Vue, Web APIs
-			</div>
-		</div>
 
-		<div class="about__majors">
-			<div class="major"></div>
-			<div class="major__icon">
-				<i class="fas fa-mobile-alt"></i>
+			<div class="major">
+				<div class="major__icon">
+					<i class="fas fa-mobile-alt"></i>
+				</div>
+				<h2 class="major__title">Mobile</h2>
+				<div class="major__description">
+					Android, Java
+				</div>
 			</div>
-			<div class="major__title">Mobie</div>
-			<div class="major__description">
-				Android, Java
-			</div>
-		</div>
-
-		<div class="about__majors">
-			<div class="major"></div>
-			<div class="major__icon">
-				<i class="fas fa-server"></i>
-			</div>
-			<div class="major__title">Back-end</div>
-			<div class="major__description">
-				Django, Python, REST APIs
+			
+			<div class="major">
+				<div class="major__icon">
+					<i class="fas fa-server"></i>
+				</div>
+				<h2 class="major__title">Back-end</h2>
+				<div class="major__description">
+					Django, Python, REST APIs
+				</div>
 			</div>
 		</div>
 
 		<div class="about__jobs">
 			<div class="job">
-				<img src="imgs/WELT.png" alt="welt" class="job__logo">
-				<p class="job__name">웰트 주식회사, 소프트웨어 엔지니어, 인턴</p>
-				<p class="jog__period">2019 June - 2019 Dec</p>
+				<div class="logo__container">
+					<img src="imgs/WELT.png" alt="welt" class="job__logo">
+				</div>
+				<div class="job__description">
+					<p class="job__name">웰트 주식회사, 소프트웨어 엔지니어, 인턴</p>
+					<p class="job__period">2019 June - 2019 Dec</p>
+				</div>
 			</div>
 			<div class="job">
-				<img src="imgs/ssafy.png" alt="ssafy" class="job__logo">
-				<p class="job__name">삼성 청년 SW 아카데미(SSAFY), 3기, 교육</p>
-				<p class="jog__period">2020 Jan - Current</p>
+				<div class="logo__container">
+					<img src="imgs/ssafy.png" alt="ssafy" class="job__logo">
+				</div>
+				<div class="job__description">
+					<p class="job__name">삼성 청년 SW 아카데미(SSAFY), 3기, 교육</p>
+					<p class="job__period">2020 Jan - Current</p>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Skills -->
-	<section id="skills">
-		<h1>Skills</h1>
-		<h2>Skills & Attributes</h2>
-		<p>
-			Experience with all phases of the software life-cycle. Passion for learning new technologies. Capable of 
-			working within a team environment and independently. Ability to plan and time schedule, work under strict 
-			time pressure and adapt quickly when needed.
-		</p>
-		<div class="skillset">
-			<div class="skillset__left">
-				<h3 class="skillset_title">Skills</h3>
-				<div class="skill">
-					<div class="skill__description">
-						<span>HTML</span>
-						<span>99%</span>
+	<section id="skill" class="section">
+		<div class="section__container">
+			<h1>Skills</h1>
+			<h2>Skills & Attributes</h2>
+			<p>
+				Experience with all phases of the software life-cycle. Passion for learning new technologies. Capable of 
+				working within a team environment and independently. Ability to plan and time schedule, work under strict 
+				time pressure and adapt quickly when needed.
+			</p>
+			<div class="skillset">
+				<div class="skillset__left">
+					<h3 class="skillset__title">Skills</h3>
+					<div class="skill">
+						<div class="skill__description">
+							<span>HTML</span>
+							<span>99%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill__value" style="width:99%;"></div>
+						</div>
 					</div>
-					<div class="skill__bar">
-						<div class="skill__value"></div>
+	
+					<div class="skill">
+						<div class="skill__description">
+							<span>CSS</span>
+							<span>90%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill__value" style="width:90%;"></div>
+						</div>
 					</div>
+	
+					<div class="skill">
+						<div class="skill__description">
+							<span>JavaScript</span>
+							<span>70%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill__value" style="width:70%;"></div>
+						</div>
+					</div>
+	
+					<div class="skill">
+						<div class="skill__description">
+							<span>Vue</span>
+							<span>80%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill__value" style="width:80%;"></div>
+						</div>
+					</div>
+	
+					<div class="skill">
+						<div class="skill__description">
+							<span>Django</span>
+							<span>80%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill__value" style="width:80%;"></div>
+						</div>
+					</div>
+	
 				</div>
-
-				<div class="skill">
-					<div class="skill__description">
-						<span>CSS</span>
-						<span>90%</span>
+				<div class="skillset__right">
+					<div class="tools">
+						<h3 class="skillset__title">Tools</h3>
+						<ul class="tools__list">
+							<li><span>Visual Studio Code</span></li>
+							<li><span>PyCharm</span></li>
+							<li><span>MATLAB</span></li>
+							<li><span>Android Studio Code</span></li>
+						</ul>
 					</div>
-					<div class="skill__bar">
-						<div class="skill__value"></div>
+					<div class="etc">
+						<h3 class="skillset__title">Etc</h3>
+						<ul class="etc__list">
+							<li><span>Git</span></li>
+							<li><span>Notion</span></li>
+						</ul>
 					</div>
-				</div>
-
-				<div class="skill">
-					<div class="skill__description">
-						<span>JavaScript</span>
-						<span>70%</span>
-					</div>
-					<div class="skill__bar">
-						<div class="skill__value"></div>
-					</div>
-				</div>
-
-				<div class="skill">
-					<div class="skill__description">
-						<span>Vue</span>
-						<span>80%</span>
-					</div>
-					<div class="skill__bar">
-						<div class="skill__value"></div>
-					</div>
-				</div>
-
-				<div class="skill">
-					<div class="skill__description">
-						<span>Django</span>
-						<span>80%</span>
-					</div>
-					<div class="skill__bar">
-						<div class="skill__value"></div>
-					</div>
-				</div>
-
-			</div>
-			<div class="skillset__rignt">
-				<div class="tools">
-					<h3 class="skillset__title">Tools</h3>
-					<ul class="tools__list">
-						<li><span>Visual Studio Code</span></li>
-						<li><span>PyCharm</span></li>
-						<li><span>MATLAB</span></li>
-						<li><span>Android Studio Code</span></li>
-					</ul>
-				</div>
-				<div class="etc">
-					<h3 class="skillset__title">Etc</h3>
-					<ul class="etc__list">
-						<li><span>Git</span></li>
-						<li><span>Notion</span></li>
-					</ul>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Work -->
-	<section id="work">
+	<section id="work" class="section">
 		<h1>My work</h1>
 		<h3>Projects</h3>
 		<div class="work__categories">
 			<button class="category__btn">All <span class="category__count">5</span></button>
-			<button class="category__btn">Web<span class="category__count">2</span></button>
-			<button class="category__btn">Mobile<span class="category__count">1</span></button>
-			<button class="category__btn">R&D<span class="category__count">2</span></button>
+			<button class="category__btn">Web <span class="category__count">2</span></button>
+			<button class="category__btn">Mobile <span class="category__count">1</span></button>
+			<button class="category__btn">R&D <span class="category__count">2</span></button>
 		</div>
 
 		<div class="work__projects">
 			<a href="#" class="project" target="blank">
-				<img src="imgs/projects/JSBW.png" alt="JSBW">
+				<img src="imgs/projects/JSBW.png" alt="JSBW"  class="project__img">
 				<div class="project__description">
 					<h3>장.씨.배우</h3>
-					<span>Vue와 Django를 활용한 영화 추천 웹서비스</span>
+					<span>Vue와 Django를 활용한 <br/> 영화 추천 웹서비스</span>
 				</div>
 			</a>
 
 			<a href="#" class="project" target="blank">
-				<img src="imgs/projects/gaitspeed.png" alt="gait speedometer">
+				<img src="imgs/projects/gaitspeed.png" alt="gait speedometer" class="project__img">
 				<div class="project__description">
 					<h3>Gait Speedometer</h3>
-					<span>실시간 보행수, 보행속도 측정 실험용 어플리케이션</span>
+					<span>실시간 보행수, 보행속도 측정 <br/> 실험용 어플리케이션</span>
 				</div>
 			</a>
 		</div>
