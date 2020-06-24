@@ -237,7 +237,7 @@ p {
 }
 
 .job__description {
-    margin: 8px 16px;
+    margin: 8px 0px 8px 16px;
     text-align: left;
 }
 
@@ -254,7 +254,7 @@ p {
 }
 
 .logo__container {
-    width: 100px;
+    width: 80px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -326,10 +326,12 @@ p {
 }
 
 .category__btn {
+    position: relative;
     border: 1px solid var(--color-dark-white);
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    width: 150px;
 }
 
 .category__btn.selected,
@@ -352,9 +354,10 @@ p {
     height: 24px;
     display: inline-block;
     line-height: 24px;
-    position: relative;
+    margin-top: 5px;
+    position: absolute;
     top: -20px;
-    left: 4px;
+    right: 16px;
     opacity: 0;
     transition: all var(--animation-duration) ease;
 }
@@ -411,7 +414,7 @@ p {
 }
 
 .project__description h3 {
-    color: var(--color-white)
+    color: var(--color-orange)
 }
 
 .project__description h3:after {
@@ -419,9 +422,9 @@ p {
     display: block;
     position:  relative;
     left: 50%;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
-    width: 25px;
+    width: 50px;
     height: 2px;
     background-color: var(--color-light-white);
 }
@@ -510,31 +513,64 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+    :root {
+        /* Font size */
+        --font-large: 30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+    }
+
     .navbar__toggle-btn {
         display: block;
+        top: 16px;
+        right: 16px;
     }
 
     #navbar {
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-blue);
     }
+
+    .navbar__menu.open {
+        display: block;
+    }
+
+    .section {
+        padding: 16px;
+        padding-top: 40px;
+    }
+
     .navbar__menu {
         flex-direction: column;
         text-align: center;
         width: 100%;
         display: none;
+        
+    }
+
+    .work__categories {
+        margin: 20px;
     }
 
     .about__majors {
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
     }
 
     .major {
-        margin-bottom: 38px;
+        margin-bottom: 30px;
     }
 
     .skillset {
         flex-direction: column;
+    }
+
+    .category__btn {
+        margin: 4px 0;
     }
 
     .project {
@@ -544,5 +580,14 @@ p {
     .testimonial__avatar {
         width: 80px;
         height: 80px;
+    }
+
+    .arrow-up {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        line-height: 50px;
+        right: 16px;
+        bottom: 16px;
     }
 }
