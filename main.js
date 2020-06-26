@@ -90,11 +90,75 @@ workBtnContainer.addEventListener('click', (e) => {
     }, 300)
 })
 
+const fallingModal = document.getElementById('falling__modal');
+const fallingModalBtn = document.getElementById("falling");
+const fallingCloseBtn = document.getElementsByClassName("close")[0];
+const hrvModal = document.getElementById('hrv__modal');
+const hrvModalBtn = document.getElementById("hrv");
+const hrvCloseBtn = document.getElementsByClassName("close")[1];
+let slideIndex = 1;
+let slideName = '';
 
+// When the user clicks on the button, open the modal 
+function fallingModalClick() {
+    fallingModal.style.display = "block";
+    slideIndex = 1;
+    slideName = 'falling'
+    showSlides(slideIndex, slideName);
+}
 
+fallingCloseBtn.onclick = function () {
+    fallingModal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if (event.target == fallingModal) {
+        fallingModal.style.display = "none";
+    } else if (event.target == hrvModal) {
+        hrvModal.style.display = "none"
+    }
+}
+
+function hrvModalClick() {
+    hrvModal.style.display = "block";
+    slideIndex = 1;
+    slideName = 'hrv'
+    showSlides(slideIndex, slideName);
+}
+
+hrvCloseBtn.onclick = function () {
+    hrvModal.style.display = "none";
+}
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n, slideName);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n, slideName);
+}
+
+function showSlides(n, projectName) {
+    let i;
+    const slides = document.getElementsByClassName(`${projectName}-slide`);
+    const dots = document.getElementsByClassName(`${projectName}-dot`);
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector)
-    scrollTo.scrollIntoView({ behavior: 'smooth'} )
+    scrollTo.scrollIntoView({ behavior: 'smooth' })
+    modal.classList.remove('modal-open')
 }
 
