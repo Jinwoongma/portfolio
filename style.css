@@ -448,7 +448,7 @@ p {
 
 .modal__header {
     padding: 16px;
-    font-size: var(--font-medium);
+    font-size: var(--font-regular);
     border-bottom: 0.5px solid var(--color-grey);
 }
 
@@ -475,6 +475,7 @@ p {
 .modal__body ul {
     list-style: square;
     margin-left: 20px;
+    margin-top: 0;
 }
 
 .modal__body li {
@@ -742,6 +743,11 @@ p {
 
     .project {
         flex-grow: 1;
+    }
+
+    .modal__content {
+        max-height: 500px;
+        overflow-y:scroll;
     }
 
     .testimonial__avatar {
