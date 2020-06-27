@@ -213,13 +213,43 @@
 			</div>
 	
 			<div class="work__projects">
-				<a href="https://github.com/Jinwoongma/ssafy_final_pjt_JSBW" class="project" target="blank" data-type="web">
+				<a style="cursor:pointer" onclick="jsbwModalClick()" id="jsbw" class="project" target="blank" data-type="web">
 					<img src="imgs/projects/JSBW.png" alt="JSBW"  class="project__img">
 					<div class="project__description">
 						<h3>장.씨.배우</h3>
 						<span>Vue와 Django를 활용한 <br/> 영화 추천 웹서비스</span>
 					</div>
 				</a>
+				<div id="jsbw__modal" class="modal">
+					<div class="modal__content">
+						<div class="modal__header">
+							<span class="close">&times;</span>
+							Vue와 Django를 활용한 영화 추천 웹서비스 </br> (SSAFY 1학기 최종 프로젝트)
+						  </div>
+						  <div class="modal__body">
+								
+								<div class="modal__subheader">
+									<p>사용기술: Vue.js, Django </p> 
+									<p>프로젝트 규모: 개발 2명(본인 포함)</p> 
+									<p>개발 기간: 2020.06.10 ~ 2020.06.17</p> 
+								</div>
+								<h4 style="margin-top: 0;">시연 영상</h4>
+								<div class="iframebox">
+									<iframe src="https://drive.google.com/file/d/1TbpzJ3SC2Y2eTz49EHIU5KerHduIPb8m/preview?usp=sharing&embedded=true" width="100%"></iframe>
+								</div>
+								<ul>
+									<li>Selenium을 활용하여 영화진흥위원회에서 영화관련정보 크롤링</li>
+									<li>크롤링한 데이터 JSON화 및 서버 구축</li>
+									<li>DB에 저장된 영화 정보를 불러와 카드 형태로 정보 제공</li>
+									<li>영화 상세정보 및 youtube API 활용한 영화 트레일러 제공</li>
+									<li>Vuex를 활용한 로그인 상태 관리 (login, logout, signup)</li>
+									<li>영화 리뷰 및 댓글 CRUD 기능 구현</li>
+									<li>작성한 리뷰, 날씨, 이상형 월드컵 총 3가지 방법으로 사용자에게 영화 추천</li>
+									<li>촤종 시연회에서 1등(최우수상) 수상</li>
+								</ul>
+						  </div>
+					</div>
+				</div>
 
 				<a href="https://github.com/Jinwoongma/portfolio" class="project" target="blank" data-type="web">
 					<img src="imgs/projects/portfolio.png" alt="portfolio"  class="project__img">

@@ -92,10 +92,13 @@ workBtnContainer.addEventListener('click', (e) => {
 
 const fallingModal = document.getElementById('falling__modal');
 const fallingModalBtn = document.getElementById("falling");
-const fallingCloseBtn = document.getElementsByClassName("close")[0];
+const fallingCloseBtn = document.getElementsByClassName("close")[1];
 const hrvModal = document.getElementById('hrv__modal');
 const hrvModalBtn = document.getElementById("hrv");
-const hrvCloseBtn = document.getElementsByClassName("close")[1];
+const hrvCloseBtn = document.getElementsByClassName("close")[2];
+const jsbwModal = document.getElementById('jsbw__modal');
+const jsbwModalBtn = document.getElementById("jsbw");
+const jsbwCloseBtn = document.getElementsByClassName("close")[0];
 let slideIndex = 1;
 let slideName = '';
 
@@ -116,6 +119,8 @@ window.onclick = function (event) {
         fallingModal.style.display = "none";
     } else if (event.target == hrvModal) {
         hrvModal.style.display = "none"
+    } else if (event.target == jsbwModal) {
+        jsbwModal.style.display == "none"
     }
 }
 
@@ -128,6 +133,17 @@ function hrvModalClick() {
 
 hrvCloseBtn.onclick = function () {
     hrvModal.style.display = "none";
+}
+
+function jsbwModalClick() {
+    jsbwModal.style.display = "block";
+    slideIndex = 1;
+    slideName = 'jsbw'
+    showSlides(slideIndex, slideName);
+}
+
+jsbwCloseBtn.onclick = function () {
+    jsbwModal.style.display = "none";
 }
 
 // Next/previous controls
