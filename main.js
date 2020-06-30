@@ -120,7 +120,9 @@ window.onclick = function (event) {
     } else if (event.target == hrvModal) {
         hrvModal.style.display = "none"
     } else if (event.target == jsbwModal) {
-        jsbwModal.style.display == "none"
+        var iframe = document.getElementsByClassName('jsbw__video');
+        iframe[0].src = iframe[0].src;
+        jsbwModal.style.display = "none"
     }
 }
 
@@ -137,13 +139,13 @@ hrvCloseBtn.onclick = function () {
 
 function jsbwModalClick() {
     jsbwModal.style.display = "block";
-    slideIndex = 1;
-    slideName = 'jsbw'
-    showSlides(slideIndex, slideName);
+
 }
 
 jsbwCloseBtn.onclick = function () {
     jsbwModal.style.display = "none";
+    var iframe = document.getElementsByClassName('jsbw__video');
+    iframe[0].src = iframe[0].src;
 }
 
 // Next/previous controls
